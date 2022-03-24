@@ -6,6 +6,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 以下は iOS 9 バグ対応に shrink-to-fit=no を追加　 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.js"
         integrity="sha256-MV/L2nrfaNYQUtnDja7Ok3sF1D5Rpviw/MUs76PX9nE=" crossorigin="anonymous"></script>
@@ -29,47 +33,48 @@
 
     <header>
         <!-- mobile -->
-        <div class="mobile_header">
-            <div class="mobile_logo">
-                <a href="top.html"><img src="img/640-160.gif" alt="高知風俗デリヘル　マシェリ macherire"></a>
-            </div>
-            <div class="circle"><a href="tel:09062800110"><i class="fa-solid fa-phone fa-stack-1x"></i></a>
-            </div>
-        </div>
+        <ul class="mobile_header">
+            <li class="mobile_logo">
+                <a href="top.html"><img class="mobile_logo_1" src="img/640-160.gif" alt="高知風俗デリヘル　マシェリ macherire"></a>
+            </li>
+            <li class="circle"><a href="tel:09062800110"><i class="fa-solid fa-phone fa-stack-1x"></i></a>
+            </li>
+        </ul>
         <!-- mobileここまで -->
         <!-- PC -->
-        <nav>
-            <div class="top">
-                <a href="top.html"><img src="img/640-160.gif" alt="高知風俗デリヘル　マシェリ macherire"></a>
-            </div>
-            <ul>
-                <li class="tel">090-6280-0110</li>
-                <li class="twitter_1"><i class="fab fa-twitter fa-fw"></i></li>
-                <li class="search_wrap">
+        <nav_log>
+            <ul class="header_log">
+                <li class="flexItem log_img"><a href="top.html"><img class="top_img" src="img/640-160.gif"
+                            alt="高知風俗デリヘル　マシェリ macherire"></a>
+                </li>
+
+                <li class="flexItem tel">090-6280-0110</li>
+                <li class="flexItem twitter_1"><i class="fab fa-twitter fa-fw"></i></li>
+                <li class="flexItem search">
                     <form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                         <input type="text" name="s" id="s" class="search_text" placeholder="入力">
                         <button type="submit" class="search_button">検索</button>
                     </form>
                 </li>
             </ul>
-        </nav>
-        <!-- PCメニュー -->
-        <div class="nav-wrap">
-            <ul class="nav-wrap1">
-                <li class="nav-wrap2"><a href="#">Top</a></li>
-                <li class="nav-wrap2"><a href="#">在籍スタッフ</a></li>
-                <li class="nav-wrap2"><a href="#">写メ日記</a></li>
-                <li class="nav-wrap2"><a href="#">料金表</a></li>
-                <li class="nav-wrap2"><a href="#">新着情報</a></li>
-                <li class="nav-wrap2"><a href="#">料金表</a></li>
-                <li class="nav-wrap2"><a href="#">利用規約</a></li>
-                <li class="nav-wrap2"><a href="#">女の子募集</a></li>
-            </ul>
-        </div>
+            </nav>
+            <!-- PCメニュー -->
+            <div class="nav-wrap">
+                <ul class="nav-wrap1">
+                    <li class="nav-wrap2"><a href="#">Top</a></li>
+                    <li class="nav-wrap2"><a href="#">在籍スタッフ</a></li>
+                    <li class="nav-wrap2"><a href="#">写メ日記</a></li>
+                    <li class="nav-wrap2"><a href="#">料金表</a></li>
+                    <li class="nav-wrap2"><a href="#">新着情報</a></li>
+                    <li class="nav-wrap2"><a href="#">料金表</a></li>
+                    <li class="nav-wrap2"><a href="#">利用規約</a></li>
+                    <li class="nav-wrap2"><a href="#">女の子募集</a></li>
+                </ul>
+            </div>
     </header>
     <!-- PCここまで -->
     <main>
-
+        <!-- ここまで
         <div class="yokonarabe">
             <div>
                 <h2>スプレ無料</h2>
@@ -91,19 +96,19 @@
                 </div>
             </div>
         </div>
-
+    -->
         <div class="wrap">
 
-            <div class="main-cont">
-                <div class="heading_left">
-                    <h2>出勤表</h2>
-                    <iframe
-                        src="https://www.undernavi.com/shikoku/kochi/shop/macherie/schedule/?vmode=sp&amp;flg=6&amp;state=1&amp;view=all"
-                        name="calendar" width="400px" height="2210px" frameborder="0" F\ scrolling="no"></iframe>
 
-                </div>
+            <div class="item heading_left">
+                <h2>出勤表</h2>
+                <iframe
+                    src="https://www.undernavi.com/shikoku/kochi/shop/macherie/schedule/?vmode=sp&amp;flg=6&amp;state=1&amp;view=all"
+                    name="calendar" width="400px" height="2210px" frameborder="0" F\ scrolling="no"></iframe>
+
             </div>
-            <div class="sub-1">
+
+            <div class="item sub-1">
                 <div class="heading_right1">
                     <h2>料金表</h2>
                     <div class="parent">
@@ -169,7 +174,7 @@
                     </div>
                 </div>
             </div>
-            <div class="sub-2">
+            <div class="item sub-2">
                 <h2>新着情報</h2>
                 <div class="btn-flat-logo_1">
                     <a href="#" class="btn-flat-logo">
@@ -177,7 +182,7 @@
                     </a>
                 </div>
             </div>
-            <div class="sub-3">
+            <div class="item sub-3">
                 <h2>写メ日記</h2>
                 <div class="btn-flat-logo_1">
                     <a href="#" class="btn-flat-logo">
@@ -187,10 +192,11 @@
             </div>
 
         </div>
-        <div class="Job_1">
-            <img class="Job_1" src="img/145922529259497900.jpg" href="#" target="_blank" alt="普通の女の子募集">
-        </div>
     </main>
+    <div class="Job_1">
+        <img class="Job_1" src="img/145922529259497900.jpg" href="#" target="_blank" alt="普通の女の子募集">
+    </div>
+
     <footer>
         <div class="footer_img">
             <img class="" src="img/footer1200-190.jpg" alt="">
